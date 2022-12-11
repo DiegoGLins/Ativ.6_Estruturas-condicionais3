@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 18</title>
+</head>
+<body>
+    <!-- Uma loja de eletrodomésticos estabeleceu as seguintes
+modalidades de pagamento para a venda de suas mercadorias:
+
+á vista ------------ desconto de 2,5% sobre a tabela;
+De 2 a 5 vezes ----- preço de tabela, sem desconto ou acréscimo;
+De 6 a 10 vezes ---- juros de 6 % sobre o preço de tabela;
+De 11 a 15 vezes --- juros de 13% sobre o preço de tabela;
+
+Escreva um algoritmo que armazene o preço de tabela e o número
+de vezes em que o pagamento será feito. Calcule o valor de cada
+parcela e o preço total da compra e imprima no console -->
+
+</body>
+
+<script>
+
+let precoTabela = parseFloat(prompt('Digite o preço do produto: '))
+let parcelas = parseFloat(prompt('Digite a quantidade de parcelas para pagamento:'))
+let pgtoAvista = precoTabela - (precoTabela * 0.025);
+let pgtoTwotoFive = precoTabela;
+let pgtoSixtoTen = precoTabela + (precoTabela * 0.06);
+let pgtoEleventoFifteen = precoTabela + (precoTabela * 0.13);
+let valorParcelas = 0;
+
+if(parcelas < 2) {        
+document.write(`Pagamento á vista. Desconto de 2,5%. Total da compra é R$ ${pgtoAvista.toFixed(2)}`)
+}
+else if (parcelas >= 2 && parcelas <= 5) 
+{
+valorParcelas = (precoTabela / parcelas);
+document.write(`Pagamento feito em: ${parcelas} parcelas de R$ ${valorParcelas.toFixed(2)}. Total da compra é R$ ${pgtoTwotoFive.toFixed(2)}`)
+}
+else if (parcelas >=6 && parcelas <= 10){
+valorParcelas = (pgtoSixtoTen / parcelas);    
+document.write(`Pagamento feito em: ${parcelas} parcelas de R$ ${valorParcelas.toFixed(2)}. Total da compra é R$ ${pgtoSixtoTen.toFixed(2)}`)
+}
+else if (parcelas >10 && parcelas <= 15)
+{
+valorParcelas = (pgtoEleventoFifteen / parcelas)   
+document.write(`Pagamento feito em: ${parcelas} parcelas de R$ ${valorParcelas.toFixed(2)}. Total da compra é R$ ${pgtoEleventoFifteen.toFixed(2)}`)
+}
+else {
+document.write('Número de parcelas ou condição de pagamento inválida. \n Digite um número de parcelas de 1 a 15 vezes')    
+}
+
+
+</script>
+</html>

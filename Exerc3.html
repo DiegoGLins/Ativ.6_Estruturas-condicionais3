@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exerc 3</title>
+  </head>
+  <body>
+    <script>
+      // Utilizando o IF, ELSE, ELSE IF crie uma estrutura para receber um
+      // número de 1 a 7 e imprimir no console o dia da Semana. Para este
+      // exercício assumimos que o dia 1 é Domingo, dia 2 é segunda e assim
+      // por diante. Caso o número recebido não esteja neste intervalo
+      // imprimir “Dia não reconhecido”
+
+      let DiaDaSemana = parseInt(
+        prompt(
+          'Digite: \n 1- para domingo \n 2 - para segunda \n 3 - para terça \n 4 - para quarta \n 5 - para quinta \n 6 - para sexta \n 7 - sábado'
+        )
+      );
+
+      if (DiaDaSemana === 1) {
+        console.log('Dia selecionado: Domingo');
+      } else if (DiaDaSemana === 2) {
+        console.log('Dia selecionado: Segunda-feira');
+      } else if (DiaDaSemana === 3) {
+        console.log('Dia selecionado: Terça-feira');
+      } else if (DiaDaSemana === 4) {
+        console.log('Dia selecionado: Quarta-feira');
+      } else if (DiaDaSemana === 5) {
+        console.log('Dia selecionado: Quinta-feira');
+      } else if (DiaDaSemana === 6) {
+        console.log('Dia selecionado: Sexta-feira');
+      } else if (DiaDaSemana === 7) {
+        console.log('Dia selecionado: Sábado');
+      } else {
+        console.log('Dia selcionado: inválido');
+      }
+    </script>
+  </body>
+</html>

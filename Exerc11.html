@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 11</title>
+</head>
+<body>
+    <!-- Utilizando Switch, faça um programa que pergunte em que turno
+você estuda. Peça para digitar “M” para matutino ou “V” para
+vespertino ou “N” para noturno. Mostre um alerta com a mensagem
+“Bom dia!” ou “Boa tarde” ou “Boa Noite” ou “Valor inválido”,
+conforme o caso. -->
+</body>
+
+<script>
+
+const turno = prompt('Digite o turno que você estuda:  \n M - Matutino \n V - Vespertino \n N - Noturno')
+
+switch (turno) {
+    case 'M' :
+    case 'm' : 
+    alert('Bom dia')
+    break;
+
+    case 'V' :
+    case 'v' :
+    alert('Boa tarde')
+    break;
+
+    case 'N':
+    case 'n' :
+    alert('Boa noite')
+    break;
+
+    default:
+    alert('Valor inválido')
+    break;
+    }
+
+</script>
+</html>
